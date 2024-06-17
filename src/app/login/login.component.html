@@ -1,0 +1,54 @@
+
+    <div>
+       
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" ><h1>LIBRAS</h1></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    Área de login
+                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      
+                  <li class="nav-item dropdown">
+                    
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true"></a>
+                  </li>
+                </ul>
+        
+              </div>
+
+              
+              <img  src="https://logodownload.org/wp-content/uploads/2018/05/libras-logo-liguagem-de-sinais-logo.png" width="100" height="100" />
+            </div>
+          </nav>
+        
+      </div>
+    <div class="page">
+        <div class="formLogin">
+          <div *ngIf="showErrorMessages" class="alert alert-danger" role="alert">
+            Email ou senha invalidos!
+          </div>
+            <h1>Login</h1>
+            <img>
+          
+            <p>Digite os seus dados de acesso no campo abaixo.</p>
+            <label for="email">Login</label>
+            <input type="email" placeholder="Digite seu login" autofocus="true" 
+            [formControl]="login"/>
+
+            <label for="password">Senha</label>
+            <input type="password" placeholder="Digite sua senha" 
+            [formControl]="password"/>
+
+            
+            <input type="submit" value="Acessar" (click)="Fazerlogin()" class="btn" />
+            <input type="button" value="Cadastro" (click)="cadastro()" class="btn" />
+        </div>
+
+    </div>
+    

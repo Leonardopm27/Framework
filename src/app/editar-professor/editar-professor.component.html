@@ -1,0 +1,70 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div>
+
+       
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" ><h1>LIBRAS</h1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                Área de Cadastro de Professor
+            </ul>
+
+        
+
+           
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  
+              <li class="nav-item dropdown">
+                
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true"></a>
+              </li>
+            </ul>
+    
+          </div>
+
+          
+          <img  src="https://logodownload.org/wp-content/uploads/2018/05/libras-logo-liguagem-de-sinais-logo.png" width="100" height="100" />
+        </div>
+      </nav>
+    
+<div class="page">
+    <div [formGroup]="formGroup" class="formLogin">
+        <div *ngIf="showErrorMessages" class="alert alert-danger" role="alert">
+        Falha editar professor!
+      </div>
+      <div *ngIf="showSuccessMessages" class="w3-panel w3-pale-green w3-border" role="alert">
+        Professor editado com sucesso!
+      </div>
+
+     
+
+        <div><H1>Edite o Professor</H1>
+          <img class="img" src="../../assets/professorImg.jpeg"  width="50" height="50"></div>
+        <br> 
+       
+   
+        <label for="nome"> Nome do Professor</label>
+        <input type="nome" placeholder="Digite seu login" required minlength="3" title="Nome invalido" formControlName="nome" />
+        <label for="email"> Digite o email do Professor</label>
+        <input type="email" placeholder="**@**"  formControlName="email" pattern="^[\w.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+        title="Informe um email válido" />         
+        
+        <label for="Login"> Digite a formação do professor</label>
+        <input type="Login" placeholder=""   formControlName="ocupacao"/>
+
+       
+        <!--<label for="password">Crie uma senha </label>
+        <input type="password" placeholder="Senha deve possuir número e caracter especial" /> -->
+
+        
+        <input type="submit" value="Cadastrar Professor" (click)="atualizarProfessor()" class="btn" />
+        
+        </div>
+
+</div>
